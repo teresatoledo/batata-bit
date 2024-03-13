@@ -22,7 +22,7 @@
 					Batatabit te ayuda a navegar entre los diferentes precios y
 					tendencias.
 				</p>
-				<a class="header__button" href=""
+				<a class="header__button" href="#plans"
 					>Conoce nuestros planes <span></span
 				></a>
 			</div>
@@ -114,8 +114,8 @@
 				</section>
 			</section>
 			<section class="main__product-detail">
-				<span></span>
-				<div>
+				<span class="product-detail__batata-logo"></span>
+				<div class="product-detail__title">
 					<h2>Creamos un producto sin comparación.</h2>
 					<p>Confiable y diseñado para su uso diario.</p>
 				</div>
@@ -130,7 +130,7 @@
 							las tasas que más determinan el comportamiento.
 						</p>
 					</article>
-					<article>
+					<article class="product-detail__card">
 						<span class="product__icon"
 							><img src="./assets/icons/eye.svg" alt=""
 						/></span>
@@ -143,7 +143,7 @@
 							adquiriendo.
 						</p>
 					</article>
-					<article>
+					<article class="product-detail__card">
 						<span class="product__icon"
 							><img src="./assets/icons/dollar-sign.svg" alt=""
 						/></span>
@@ -153,7 +153,7 @@
 							cada moneda en el mercado actual.
 						</p>
 					</article>
-					<article>
+					<article class="product-detail__card">
 						<span class="product__icon"
 							><img src="./assets/icons/check-circle.svg" alt=""
 						/></span>
@@ -166,8 +166,60 @@
 					</article>
 				</section>
 			</section>
-			<section></section>
-			<section></section>
+			<section class="bitcoin-img-container">
+				<h2>Conócelo hoy</h2>
+			</section>
+			<section class="main__plans-container" id="plans">
+				<div class="plans__title">
+					<h2>Escoge el plan que más se ajuste a ti</h2>
+					<p>
+						Cualquier plan te da acceso completo a nuestra
+						plataforma.
+					</p>
+				</div>
+
+				<section class="plans-container__slider">
+					<article class="plans-container__card">
+						<p class="basic">Básico</p>
+						<div class="plan-info-container">
+							<h3 class="plan-card__title">Pago mensual</h3>
+							<p class="plan-card__price"><span>$</span>19</p>
+							<p class="plan-card__saving">
+								*Mismas ventajas, pero mes a mes.
+							</p>
+							<button class="plan-card__call">
+								Escoger este <span></span>
+							</button>
+						</div>
+					</article>
+					<article class="plans-container__card">
+						<p class="recommended">Recomendado</p>
+						<div class="plan-info-container">
+							<h3 class="plan-card__title">Pago anual</h3>
+							<p class="plan-card__price"><span>$</span>99</p>
+							<p class="plan-card__saving">
+								*Ahorras $129 comparado al plan mensual.
+							</p>
+							<button class="plan-card__call">
+								Escoger este <span></span>
+							</button>
+						</div>
+					</article>
+					<article class="plans-container__card">
+						<p class="limited">Limitado</p>
+						<div class="plan-info-container">
+							<h3 class="plan-card__title">Pago de por vida</h3>
+							<p class="plan-card__price"><span>$</span>199</p>
+							<p class="plan-card__saving">
+								*Exclusivo para los primeros 100 clientes.
+							</p>
+							<button class="plan-card__call">
+								Escoger este <span></span>
+							</button>
+						</div>
+					</article>
+				</section>
+			</section>
 		</main>
 		<footer></footer>
 	</body>
