@@ -90,7 +90,7 @@ header img {
 	width: 13px;
 	height: 8px;
 	margin-left: 10px;
-	background-image: url('./assets/icons/down-arrow.svg');
+	background-image: url('../assets/icons/down-arrow.svg');
 }
 main {
 	width: 100%;
@@ -117,7 +117,7 @@ main {
 	height: 200px;
 	margin: 0 auto;
 	margin-bottom: 50px;
-	background-image: url('./assets/img/bitcoin.svg');
+	background-image: url('../assets/img/bitcoin.svg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -202,7 +202,7 @@ main {
 	width: 15px;
 	height: 15px;
 	margin-left: 10px;
-	background-image: url(./assets/icons/trending-down.svg);
+	background-image: url(../assets/icons/trending-down.svg);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -212,7 +212,7 @@ main {
 	width: 15px;
 	height: 15px;
 	margin-left: 10px;
-	background-image: url(./assets/icons/trending-up.svg);
+	background-image: url(../assets/icons/trending-up.svg);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -295,7 +295,7 @@ main {
 	height: 25px;
 	top: -10px;
 	left: calc(50% - 20px);
-	background-image: url(./assets/icons/batata.svg);
+	background-image: url(../assets/icons/batata.svg);
 }
 .product-detail__title {
 	width: 90%;
@@ -353,7 +353,7 @@ main {
 	width: 100%;
 	min-width: 320px;
 	height: 50vh;
-	background-image: url('./assets/img/bitcoinbaby2x.jpg');
+	background-image: url('../assets/img/bitcoinbaby2x.jpg');
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -405,10 +405,10 @@ main {
 	/* Cuando hagas scroll y dejes la tarjeta a medias, automáticamente te intenta centrar la tarjeta en pantalla */
 	scroll-snap-align: center;
 	width: 70%;
-	min-width: 230px;
+	min-width: 190px;
 	max-width: 300px;
 	height: 250px;
-	margin: 50px 40px 0;
+	margin: 50px 20px 0;
 	padding: 0 15px;
 	background-color: var(--just-white);
 	border-radius: 15px;
@@ -489,6 +489,30 @@ main {
 	display: inline-block;
 	width: 20px;
 	height: 20px;
-	background-image: url('./assets/icons/orange-right-arrow.svg');
+	background-image: url('../assets/icons/orange-right-arrow.svg');
 	vertical-align: text-bottom;
+}
+.footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 150px;
+	background-color: var(--bitcoin-orange);
+}
+.footer__left {
+	width: 40%;
+}
+.footer__left--ul {
+	font-size: 1.4rem;
+	font-weight: 500;
+	line-height: 1.8rem;
+	list-style: none;
+}
+.footer__left--li {
+	margin: 10px 0;
+}
+.footer__left--a {
+	text-decoration: none;
+	color: var(--just-white);
 }

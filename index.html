@@ -9,7 +9,13 @@
 			href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500&display=swap"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="./styles.css" />
+		<link rel="stylesheet" href="./css/styles.css" />
+		<!-- Solo descarga el archivo cuando se cumpla el min-width, lo que hace que no lo tenga que descargar todo siempre y la página sea más ligera -->
+		<link
+			rel="stylesheet"
+			href="./css/queries.css"
+			media="(min-width: 930px)"
+		/>
 	</head>
 	<body>
 		<header>
@@ -221,6 +227,31 @@
 				</section>
 			</section>
 		</main>
-		<footer></footer>
+		<footer class="footer">
+			<section class="footer__left">
+				<ul class="footer__left--ul">
+					<li class="footer__left--li">
+						<a
+							class="footer__left--a"
+							href="linkedin.com/in/teresatoledo"
+							>LinkedIn</a
+						>
+					</li>
+					<li class="footer__left--li">
+						<a
+							class="footer__left--a"
+							href="https://github.com/teresatoledo"
+							>GitHub</a
+						>
+					</li>
+				</ul>
+			</section>
+			<section class="footer__right">
+				<img
+					src="./assets/img/logo-footer.svg"
+					alt="Logo de Batatabit 2020"
+				/>
+			</section>
+		</footer>
 	</body>
 </html>
