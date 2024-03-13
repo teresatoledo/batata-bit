@@ -25,3 +25,70 @@ html {
 	font-size: 62.5%;
 	font-family: 'DM Sans', sans-serif;
 }
+header {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	min-width: 320px;
+	height: 334px;
+	text-align: center;
+	background: linear-gradient(207.8deg, #201e1c 16.69%, #f7931a 100%);
+}
+header img {
+	width: 150px;
+	height: 24px;
+	margin-top: 60px;
+	/* Al darle estilos de tamaño, he roto un poco el diseño del header y se me descentra este elemento, la forma de centrar un elemento cuyo padre tiene flex, es mediante align-self */
+	align-self: center;
+}
+.header__title-container {
+	width: 90%;
+	min-width: 288px;
+	max-width: 900px;
+	height: 218;
+	margin-top: 40px;
+	text-align: center;
+	align-self: center;
+}
+.header__title-container h1 {
+	font-size: 2.4rem;
+	font-weight: bold;
+	line-height: 2.6rem;
+	color: var(--just-white);
+}
+.header__title-container p {
+	margin-top: 25px;
+	font-size: 1.4rem;
+	font-weight: 500;
+	line-height: 1.8rem;
+	color: var(--soft-orange);
+}
+.header__button {
+	position: absolute;
+	/*Calc hace el cálculo y posiciona en el 50% en este caso, pero desde el lado izquierdo, por lo que lo desplaza totalmente y no lo centra. Le restamos la mitad del tamaño del contenedor y de esta forma sí que queda centrado*/
+	left: calc(50% - 114px);
+	top: 270px;
+	display: block;
+	margin-top: 35px;
+	padding: 15px;
+	width: 229px;
+	height: 48px;
+	background-color: var(--off-white);
+	/*Sombra*/
+	box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+	border: none;
+	border-radius: 5px;
+	font-size: 1.4rem;
+	font-weight: bold;
+	text-decoration: none;
+	color: var(--black);
+}
+.header__button span {
+	display: inline-block;
+	width: 13px;
+	height: 8px;
+	margin-left: 10px;
+	background-image: url('./assets/icons/down-arrow.svg');
+}
