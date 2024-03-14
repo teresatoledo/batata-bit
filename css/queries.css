@@ -7,3 +7,12 @@
 .plans-container__slider {
 	justify-content: center;
 }
+.main__tables-container {
+	justify-content: center;
+}
+.main__tables-container::-webkit-scrollbar {
+	display: none;
+}
+.plans-container__slider::-webkit-scrollbar {
+	display: none;
+}
