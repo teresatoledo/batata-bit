@@ -1,10 +1,3 @@
-/*Orden de los estilos:
-1. Posicionamiento
-2. Modelo de caja
-3. Tipografía
-4. Visuales
-5. Otros
-*/
 :root {
 	--bitcoin-orange: #f7931a;
 	--soft-orange: #ffe9d5;
@@ -40,7 +33,7 @@ header img {
 	width: 150px;
 	height: 24px;
 	margin-top: 60px;
-	/* Al darle estilos de tamaño, he roto un poco el diseño del header y se me descentra este elemento, la forma de centrar un elemento cuyo padre tiene flex, es mediante align-self */
+	/* When giving size styles, header design will break and element will no longer be centered. They way to center an element whose father has flex, is using align-self */
 	align-self: center;
 }
 .header__title-container {
@@ -67,7 +60,7 @@ header img {
 }
 .header__button {
 	position: absolute;
-	/*Calc hace el cálculo y posiciona en el 50% en este caso, pero desde el lado izquierdo, por lo que lo desplaza totalmente y no lo centra. Le restamos la mitad del tamaño del contenedor y de esta forma sí que queda centrado*/
+	/*Calc makes the calculation and position the content at 50%, but 50% from left side, so it is not centered. If we subtract half of the size of the container, it will be centered.*/
 	left: calc(50% - 114px);
 	top: 270px;
 	display: block;
@@ -76,7 +69,6 @@ header img {
 	width: 229px;
 	height: 48px;
 	background-color: var(--off-white);
-	/*Sombra*/
 	box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
 	border: none;
 	border-radius: 5px;
@@ -112,7 +104,7 @@ main {
 	margin: 0 auto;
 }
 .backgroundImg {
-	/*El div no ocupa espacio per se, por lo que si no le doy dimensiones la imagen no se verá*/
+	/*Image is inside a div. If I don't give height and width, image will be hidden, as div as no dimensions on its own.*/
 	width: 200px;
 	height: 200px;
 	margin: 0 auto;
@@ -178,7 +170,7 @@ main {
 	color: var(--grey);
 	background-color: var(--just-white);
 }
-/* La etiqueta table no es un contenedor como tal, sino que simplemente ayuda a dar contexto, por lo que si le aplico el border radius a table no se vería visualmente nada. En el caso de las tablas, tengo que darle una clase especial a las celdas de cada una de las esquinas y ahí aplicarle el radio. */
+/* Table tag is not a container on its own, it works to give context. If I apply border-radius, visually there will be no change. In case of tables, I have to give every corner a different class to apply radius. */
 .table--top-left {
 	border-radius: 15px 0 0 0;
 }
@@ -204,8 +196,6 @@ main {
 	margin-left: 10px;
 	background-image: url(../assets/icons/trending-down.svg);
 	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
 }
 .currency-table__container .up {
 	display: inline-block;
@@ -214,14 +204,11 @@ main {
 	margin-left: 10px;
 	background-image: url(../assets/icons/trending-up.svg);
 	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
 }
 .currency-table__date {
 	width: 190px;
 	height: 30px;
-	margin: 0 auto;
-	margin-top: 15px;
+	margin: 15px auto 0px auto;
 	padding: 8px;
 	background-color: var(--soft-orange);
 	border-radius: 8px;
@@ -269,8 +256,7 @@ main {
 .commission-table__date {
 	width: 190px;
 	height: 30px;
-	margin: 0 auto;
-	margin-top: 15px;
+	margin: 15px auto 0px auto;
 	padding: 8px;
 	background-color: var(--soft-blue);
 	border-radius: 8px;
@@ -281,7 +267,7 @@ main {
 	color: var(--warm-black);
 }
 .main__product-detail {
-	/* Es importante ponerle aquí relative para que el logo, que lleva absolute, se posicione con respecto a este */
+	/* It's important to apply relative position here so logo, that will have absolute position, positions with regard to this one */
 	position: relative;
 	width: 100%;
 	min-width: 320px;
@@ -301,8 +287,7 @@ main {
 	width: 90%;
 	min-width: 288px;
 	height: auto;
-	margin: 0 auto;
-	margin-top: 50px;
+	margin: 50px auto 0px auto;
 	text-align: center;
 }
 .product-detail__title h2 {
@@ -376,8 +361,7 @@ main {
 	width: 90%;
 	min-width: 288px;
 	height: auto;
-	margin: 0 auto;
-	margin-bottom: 40px;
+	margin: 0 auto 40px auto;
 }
 .plans__title h2 {
 	padding-top: 50px;
@@ -396,13 +380,14 @@ main {
 .plans-container__slider {
 	display: flex;
 	height: 316px;
+	/* To create horizontal scrolling */
 	overflow-x: scroll;
 	overscroll-behavior-x: contain;
 	scroll-snap-type: x proximity;
 }
 .plans-container__card {
 	position: relative;
-	/* Cuando hagas scroll y dejes la tarjeta a medias, automáticamente te intenta centrar la tarjeta en pantalla */
+	/* Card will automatically be centered when scrolling and leaving the bar between two of them*/
 	scroll-snap-align: center;
 	width: 70%;
 	min-width: 190px;
@@ -414,7 +399,7 @@ main {
 	border-radius: 15px;
 	box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
 }
-.basic {
+.tinyCard {
 	position: absolute;
 	width: 120px;
 	height: 31px;
@@ -422,46 +407,30 @@ main {
 	top: -15px;
 	font-size: 1.2rem;
 	padding: 6px;
-	background-color: var(--secondary-blue);
 	border-radius: 8px;
 	color: var(--just-white);
+}
+.basic {
+	background-color: var(--secondary-blue);
 }
 .recommended {
-	position: absolute;
-	width: 120px;
-	height: 31px;
-	left: calc(50% - 60px);
-	top: -15px;
-	font-size: 1.2rem;
-	padding: 6px;
 	background-color: var(--bitcoin-orange);
-	border-radius: 8px;
-	color: var(--just-white);
 }
 .limited {
-	position: absolute;
-	width: 120px;
-	height: 31px;
-	left: calc(50% - 60px);
-	top: -15px;
-	font-size: 1.2rem;
-	padding: 6px;
 	background-color: var(--warm-black);
-	border-radius: 8px;
-	color: var(--just-white);
 }
 .plan-card__title {
 	padding-top: 30px;
 	font-size: 1.4rem;
 	font-weight: 500;
 	line-height: 1.8rem;
-	color: black;
+	color: var(--black);
 }
 .plan-card__price {
 	padding: 5px 0;
 	font-size: 5.2rem;
 	font-weight: bold;
-	color: black;
+	color: var(--black);
 }
 .plan-card__price span {
 	font-size: 1.2rem;
