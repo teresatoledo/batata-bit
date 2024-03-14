@@ -135,6 +135,9 @@ main {
 	overscroll-behavior-x: contain;
 	scroll-snap-type: x proximity;
 }
+.main__tables-container::-webkit-scrollbar {
+	display: none;
+}
 .main__currency-table {
 	scroll-snap-align: center;
 	width: 70%;
@@ -384,6 +387,9 @@ main {
 	overflow-x: scroll;
 	overscroll-behavior-x: contain;
 	scroll-snap-type: x proximity;
+}
+.plans-container__slider::-webkit-scrollbar {
+	display: none;
 }
 .plans-container__card {
 	position: relative;
