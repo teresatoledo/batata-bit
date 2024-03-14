@@ -487,3 +487,23 @@ main {
 	text-decoration: none;
 	color: var(--just-white);
 }
+@media screen and (min-width: 930px) {
+	.product-cards__container {
+		display: flex;
+		flex-wrap: wrap;
+		width: 930px;
+		margin: 0 auto;
+	}
+	.plans-container__slider {
+		justify-content: center;
+	}
+	.main__tables-container {
+		justify-content: center;
+	}
+	.main__tables-container::-webkit-scrollbar {
+		display: none;
+	}
+	.plans-container__slider::-webkit-scrollbar {
+		display: none;
+	}
+}
